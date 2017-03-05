@@ -31,20 +31,7 @@ class Card:
         self.card_gamers = self.fill_card()
         self.remove_num_list = []
 
-    def check_num(self,num):
-        for i in range(3):
-            for j in range(len(self.card_gamers)):
-                if num == self.card_gamers[i][j]:
-                    return [i,j]
-                    break
-        return []
 
-    def remove_num(self, cord):
-        if cord:
-            self.card_gamers[int(cord[0])][int(cord[1])] = '-'
-            return True
-        else:
-            return False
 
     def get_card(self):
         return self.card_gamers

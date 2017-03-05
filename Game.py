@@ -25,9 +25,11 @@ class Game:
     def get_card_in_gamer2(self):
         return self.gamer2.get_my_card()
 
-    def get_num_move(self):
+    def get_move_list(self):
         return self.list_num
 
+    def get_num_move(self):
+        return self.num_move
 
     def check_winner(self):
         pass
