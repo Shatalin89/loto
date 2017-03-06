@@ -29,7 +29,11 @@ game = Game(gamer1, gamer2)
 
 
 while not game.flag_end:
-    os.system('clear')
+    try:
+        os.system('clear') #для очистки консоли в линуксе
+    except:
+        os.sysconf('cls') #для очистка консоли в винде
+
     num = game.gen_num()
     print('Ход - {}, выпавшие номера: {}'.format(game.get_num_move(), game.get_move_list()))
     game.get_card_in_gamer1()
